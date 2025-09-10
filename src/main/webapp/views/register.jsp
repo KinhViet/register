@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .login-input { margin-bottom: 15px; }
-        .alert-danger { margin: 20px auto; width: 50%; text-align: center; }
+        .alert { margin: 20px auto; width: 50%; text-align: center; }
     </style>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <form action="register" method="post">
             <h2>Tạo tài khoản mới</h2>
             <c:if test="${alert != null}">
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <div class="alert ${alertType} alert-dismissible fade show" role="alert">
                     ${alert}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -64,6 +64,7 @@
                 </label>
             </section>
             <button type="submit" class="btn btn-primary">Đăng ký</button>
+            <a href="${pageContext.request.contextPath}/login" class="btn btn-link">Đã có tài khoản? Đăng nhập</a>
         </form>
     </div>
 

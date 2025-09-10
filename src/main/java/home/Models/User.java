@@ -1,7 +1,7 @@
 package home.Models;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 @SuppressWarnings("serial")
 public class User implements Serializable {
@@ -14,10 +14,10 @@ public class User implements Serializable {
     private int roleid;
     private String phone;
     private Date createdDate;
-    
-    // Tạo constructor rỗng và đầy đủ
+    private String resetToken; // trường resetToken
+
     public User() {}
-    
+
     public User(String email, String userName, String fullName, String passWord, String avatar, int roleid, String phone, Date createdDate) {
         this.email = email;
         this.userName = userName;
@@ -28,8 +28,8 @@ public class User implements Serializable {
         this.phone = phone;
         this.createdDate = createdDate;
     }
-    
-    // Getters và setters cho tất cả các trường
+
+    // Getters và setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getEmail() { return email; }
@@ -48,4 +48,6 @@ public class User implements Serializable {
     public void setPhone(String phone) { this.phone = phone; }
     public Date getCreatedDate() { return createdDate; }
     public void setCreatedDate(Date createdDate) { this.createdDate = createdDate; }
+    public String getResetToken() { return resetToken; }
+    public void setResetToken(String resetToken) { this.resetToken = resetToken; }
 }

@@ -8,4 +8,7 @@ public interface UserDao {
     boolean checkExistUsername(String username);
     boolean checkExistPhone(String phone);
     User findByUserName(String username);
+    User findByEmail(String email);
+    User findByResetToken(String resetToken);
+    void updatePassword(User user);
 }

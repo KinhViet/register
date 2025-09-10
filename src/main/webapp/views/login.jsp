@@ -44,6 +44,8 @@
                 <label class="form-check-label" for="remember">Ghi nhớ đăng nhập</label>
             </div>
             <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            <a href="${pageContext.request.contextPath}/register" class="btn btn-success ml-2">Đăng ký</a>
+            <a href="${pageContext.request.contextPath}/forgetpassword" class="btn btn-link">Quên mật khẩu?</a>
         </form>
     </div>
 

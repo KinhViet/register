@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Chào mừng bạn, ${sessionScope.username}!</h2>
+        <h2>Chào mừng, ${sessionScope.username}!</h2>
         <c:if test="${sessionScope.successMsg != null}">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 ${sessionScope.successMsg}
